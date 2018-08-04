@@ -23,6 +23,6 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^boards/(?P<pk>\d+)/new/$', views.new_topic, name='new_topic'),
     url(r'^boards/(?P<pk>\d+)/$', views.board_topics, name='board_topics'),
-    path(r'^login/$', include('accounts.urls')),
+    url(r'^login/', include('accounts.urls')),
     path('admin/', admin.site.urls),
 ]
